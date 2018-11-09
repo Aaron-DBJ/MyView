@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ShadowView">
+        <attr name="img_src" format="reference"/>
+        <attr name="shadowDx" format="integer"/>
+        <attr name="shadowDy" format="integer"/>
+        <attr name="shadowColor" format="color"/>
+        <attr name="shadowRadius" format="float"/>
+    </declare-styleable>
+    <declare-styleable name="CircleView">
+        <attr name="src" format="reference"/>
+        <attr name="shapeStyle" format="enum">
+            <enum name="circle" value="0"/>
+            <enum name="rectangle" value="1" />
+        </attr>
+        <attr name="roundRadius" format="dimension"/>
+        <attr name="borderWidth" format="dimension"/>
+        <attr name="borderColor" format="color"/>
+    </declare-styleable>
+</resources>

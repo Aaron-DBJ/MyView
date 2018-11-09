@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <com.example.jenny.myview.WaveView
+        android:id="@+id/wave_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--<Button-->
+        <!--android:id="@+id/animView"-->
+        <!--android:text="动画演示"-->
+        <!--android:layout_marginTop="80dp"-->
+        <!--android:layout_marginStart="80dp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+    <!--<ImageView-->
+        <!--android:layout_marginTop="100dp"-->
+        <!--android:id="@+id/imageView"-->
+        <!--android:src="@drawable/zuoji"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="100dp" />-->
+    <!--<com.arron_dbj.circleimageview.CircleImageView-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--app:shapeStyle="rectangle"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--app:borderWidth="0dp"-->
+        <!--app:borderColor="#000000"-->
+        <!--app:src="@drawable/binoculars"-->
+        <!--app:roundRadiusX="15dp"-->
+        <!--app:roundRadiusY="15dp"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="100dp" />-->
+    <!--<com.arron_dbj.circleimageview.CircleImageView-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--app:shapeStyle="rectangle"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--app:borderWidth="1dp"-->
+        <!--app:borderColor="#000000"-->
+        <!--app:src="@drawable/binoculars"-->
+        <!--app:roundRadiusX="15dp"-->
+        <!--app:roundRadiusY="15dp"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="100dp" />-->
+    <!--&lt;!&ndash;<com.arron_dbj.circleimageview.CircleImageView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_gravity="center_horizontal"&ndash;&gt;-->
+        <!--&lt;!&ndash;app:shapeStyle="roundRect"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginTop="8dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;app:borderWidth="5dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;app:borderColor="#000000"&ndash;&gt;-->
+        <!--&lt;!&ndash;app:src="@drawable/binoculars"&ndash;&gt;-->
+        <!--&lt;!&ndash;app:roundRadiusX="15dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;app:roundRadiusY="15dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="100dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="100dp" />&ndash;&gt;-->
+    <!--<com.arron_dbj.circleimageview.CircleImageView-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--app:shapeStyle="rectangle"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--app:borderWidth="15dp"-->
+        <!--app:borderColor="#000000"-->
+        <!--app:src="@drawable/binoculars"-->
+        <!--app:roundRadiusX="15dp"-->
+        <!--app:roundRadiusY="15dp"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="100dp" />-->
+
+
+</LinearLayout>
