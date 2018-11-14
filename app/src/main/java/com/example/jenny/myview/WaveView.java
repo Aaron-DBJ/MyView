@@ -28,6 +28,7 @@ public class WaveView extends View {
         super(context, attrs);
         initPaint();
 
+
     }
 
     @Override
@@ -54,8 +55,9 @@ public class WaveView extends View {
         paint1.setARGB(123,152,251,152);
         paint1.setStyle(Paint.Style.FILL_AND_STROKE);
         path1 = new Path();
-
+        setLayerType(LAYER_TYPE_SOFTWARE, null);
     }
+
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
@@ -86,7 +88,6 @@ public class WaveView extends View {
         path.close();
         canvas.drawPath(path1, paint1);
         canvas.drawPath(path, paint);
-
     }
 
     /**
@@ -94,7 +95,6 @@ public class WaveView extends View {
      * 而且只要我们移动一个波长的长度，波纹就会重合，就可以实现无限循环了。
      */
     public void moveWave(){
-
         AnimatorSet animatorSet = new AnimatorSet();
         ValueAnimator animator = ValueAnimator.ofInt(0, waveLength);
         animator.setInterpolator(new LinearInterpolator());
