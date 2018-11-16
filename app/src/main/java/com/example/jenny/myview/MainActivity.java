@@ -5,12 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
+import android.view.animation.CycleInterpolator;
+import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    private Button scale, rotate, translate, alpha;
+    private Button scale, rotate, translate, alpha, combinedAnim;
     private ImageView animaTarget;
     private Animation animation;
 
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
+
 //        WaveView waveView = findViewById(R.id.wave_view);
 //        waveView.moveWave();
 
@@ -48,38 +50,47 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initView(){
-        scale = findViewById(R.id.scale);
-        rotate = findViewById(R.id.rotate);
-        alpha = findViewById(R.id.alpha);
-        translate = findViewById(R.id.translate);
+//        scale = findViewById(R.id.scale);
+//        rotate = findViewById(R.id.rotate);
+//        alpha = findViewById(R.id.alpha);
+//        translate = findViewById(R.id.translate);
         animaTarget = findViewById(R.id.anim_target);
-        scale.setOnClickListener(this);
-        rotate.setOnClickListener(this);
-        alpha.setOnClickListener(this);
-        translate.setOnClickListener(this);
+        combinedAnim = findViewById(R.id.combinedAnim);
+        combinedAnim.setOnClickListener(this);
+//        scale.setOnClickListener(this);
+//        rotate.setOnClickListener(this);
+//        alpha.setOnClickListener(this);
+//        translate.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.scale:
-                animation = AnimationUtils.loadAnimation(this, R.anim.scale_anim);
-                animaTarget.startAnimation(animation);
-                break;
-            case R.id.alpha:
-//                animation = AnimationUtils.loadAnimation(this, R.anim.alpha_anim);
-//                animaTarget.startAnimation(animation);
-                alphaAnimation();
-                break;
-            case R.id.translate:
-                animation = AnimationUtils.loadAnimation(this, R.anim.translate_anim);
-                animaTarget.startAnimation(animation);
-                break;
-            case R.id.rotate:
-                animation = AnimationUtils.loadAnimation(this, R.anim.rotate_anim);
-                animaTarget.startAnimation(animation);
-                break;
-        }
+//        Animation animation = AnimationUtils.loadAnimation(this, R.anim.combined_anim);
+//        animation.setDuration(2000);
+//        animaTarget.startAnimation(animation);
+        Animation animation = new TranslateAnimation(0 , 450, 0, 0);
+        animation.setDuration(2000);
+        animation.setInterpolator(new CycleInterpolator(5));
+        animaTarget.startAnimation(animation);
+//        switch (view.getId()){
+////            case R.id.scale:
+////                animation = AnimationUtils.loadAnimation(this, R.anim.scale_anim);
+////                animaTarget.startAnimation(animation);
+////                break;
+////            case R.id.alpha:
+//////                animation = AnimationUtils.loadAnimation(this, R.anim.alpha_anim);
+//////                animaTarget.startAnimation(animation);
+////                alphaAnimation();
+////                break;
+////            case R.id.translate:
+////                animation = AnimationUtils.loadAnimation(this, R.anim.translate_anim);
+////                animaTarget.startAnimation(animation);
+////                break;
+////            case R.id.rotate:
+////                animation = AnimationUtils.loadAnimation(this, R.anim.rotate_anim);
+////                animaTarget.startAnimation(animation);
+////                break;
+////        }
     }
 
 //    private void frameAnimator(){
